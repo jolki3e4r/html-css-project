@@ -1,0 +1,219 @@
+*{
+   /* background: #000;*/
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+.hero{
+    /*las medidas estan en vw y vh para que el contenedor ocupe el 100% de la pantalla*/
+    width: 100vw;
+    height: 100vh;
+    /* trabajando con flexbox para centrar todos los elementos  de la pagina */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* nos aseguramos que el texto quede centrado tambien*/
+    text-align: center;
+    color: white;
+/*fondo y estilos de fondo de nuestra seccion*/
+/*el truco es obscurecer un poc la imagen con un gradiente transparente para hacer mas visible el texto sobre ella*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../img/medellin1.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+}
+
+.hero h1{
+/*el texto del titulo para hacerlo mas grande*/
+    font-size: 5em;
+    /*arreglo los margenes para que no quede tan separado del otro texto*/
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+/*animacion del tecto de entrada */
+.hero .hero-inner .TexAni {
+        -webkit-animation: TexAni 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: TexAni 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+}
+
+@-webkit-keyframes TexAni {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  @keyframes TexAni {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+/*estilos para el boton*/
+.hero .hero-inner a{
+    /*pocicion y tamaño del boton*/
+    display: block;
+    width: 200px;
+    /*estilo de bordes*/
+    border: 3px solid white;
+    border-radius: 20px;
+    /*agregamos margenes y padding para que quede mucho mejor y grande el boton*/
+    margin-top: 50px;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    /*color y tamaño del texto de nuestro boton*/
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    /*fondo del boton para que destaque entre todo el hero page*/
+    background-color: rgba(112, 215, 219, 0.8);
+
+}
+
+.hero .hero-inner a:hover{
+    background-color: rgba(85, 161, 163, 0.8);
+
+}
+
+/*comienzo de estilo de los articulos y su contenedor */
+.margenInterno{
+        padding: 0 40px;
+    }
+    
+.section{
+        background: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+        .articulos{
+            background: #f7f7f7;
+            flex: 2 1 70%;
+            display: flex;
+            /*la propiedad wrap de flexflow dice que si el contenido no alcansa pase automaticamente abajo*/
+            flex-flow: row wrap;
+            text-align: justify;
+        }
+            .article{
+                background: #ececec;
+                flex: 1 1 auto;
+                color: #444;
+                font-size: 13px;
+                letter-spacing: 1px;
+                margin: 15px 15px 0 0px;
+    
+            }
+                .article a{
+                        color: #fff;
+                        font-size: 13px;
+                        padding: 10px;
+                        background: #000;
+                        margin: 10px 0;
+                        margin-left: 10px;
+                        display: inline-block;
+                        border: 3px solid white;
+                        border-radius: 8px;
+                        background-color: rgba(112, 215, 219, 0.8);
+                }
+                .article a:hover{
+                        background-color:rgba(85, 161, 163, 0.8);
+                }
+                .article img{
+                        width:"100%";
+                        height:"315px";
+                        margin-top: 10px;
+                        margin-left: 5px;
+                        border:1px solid #021a40;
+                        border-radius: 15px;
+                        
+                }
+               .article h3{
+                        float: left;
+                        color:#fff;
+                        font-size: 2em;
+                        padding: 10px 0;
+                        margin-top: -80px;
+                        }
+                .article p{
+                        text-justify: auto;
+                        font-size: 1.25em;
+                        padding: 0 0 40px 0
+                }
+                        
+/*estilo del footer*/
+footer{
+        background: #24455f;
+        display: flex;
+        color: #fff;
+        flex-flow: row nowrap;
+        height: auto;
+        align-items: center;
+        margin-top: 10px;
+      }
+      
+      footer a{
+              color: #fff;
+              text-decoration: none;
+              text-transform: uppercase;
+        font-size: 10px;
+      }
+      
+      footer li{
+        float: inherit;
+              display: inline;
+              padding: 0 20px 0 20px;
+      }
+      .logo{
+        flex: 1 1 auto;
+        max-width: 120px;
+        max-height:120px;
+        border-radius:150px;
+        margin:10px 10px 10px 10px;
+      }
+      
+      .texto{
+        flex: 2 1 auto;
+        text-align: center;
+      }
+      
+      .social{
+        flex: 1 1 auto;
+        flex-direction: row;
+      }
+      .social ul li a{
+        max-width: 30px;
+        max-height: 30px;
+      }
+      .social img{
+        max-width: 30px;
+        max-height: 30px;
+      }
+      
